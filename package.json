@@ -38,7 +38,7 @@
     "opensky:import": "./scripts/opensky-import-client.sh",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "node --test src/setupDoctor.test.mjs src/pinokioEnvironment.test.mjs src/pinokioPreflight.test.mjs src/pinokioLauncherContract.test.mjs src/mapStartup.test.mjs"
+    "test": "node --test src/setupDoctor.test.mjs src/pinokioEnvironment.test.mjs src/pinokioPreflight.test.mjs src/pinokioLauncherContract.test.mjs src/mapStartup.test.mjs",
     "test:track": "node scripts/track-regression.mjs",
     "qa:map-source-tray": "node scripts/qa-map-source-tray.mjs"
   },
