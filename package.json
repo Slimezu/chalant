@@ -1,5 +1,5 @@
 {
-  "name": "gods-eye-view",
+  "name": "chalant",
   "private": true,
   "version": "0.1.0",
   "description": "A real-time intelligence console for planet Earth — photorealistic 3D globe, live aircraft/ships/satellites/earthquakes/CCTV, and hands-free voice control. Runs in a browser.",
@@ -9,10 +9,10 @@
   "homepage": "https://github.com/bilawalsidhu/gods-eye-view#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bilawalsidhu/gods-eye-view.git"
+    "url": "https://github.com/slimezu/chalant.git"
   },
   "bugs": {
-    "url": "https://github.com/bilawalsidhu/gods-eye-view/issues"
+    "url": "https://github.com/slimezu/chalant/issues"
   },
   "engines": {
     "node": ">=24.14.0 <25 || >=26 <27"
@@ -38,7 +38,7 @@
     "opensky:import": "./scripts/opensky-import-client.sh",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "node scripts/run-unit-tests.mjs",
+    "test": "node --test src/setupDoctor.test.mjs src/pinokioEnvironment.test.mjs src/pinokioPreflight.test.mjs src/pinokioLauncherContract.test.mjs src/mapStartup.test.mjs"
     "test:track": "node scripts/track-regression.mjs",
     "qa:map-source-tray": "node scripts/qa-map-source-tray.mjs"
   },
