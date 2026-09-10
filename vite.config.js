@@ -16,11 +16,17 @@ export function openAiRealtimeProxy() {
 export default defineConfig({
   plugins: [cesium(), openAiRealtimeProxy()],
   base: '/chalant/',
-  // CRITICAL: Exclude cesium from Vite's dep optimization
-  optimizeDeps: {
-    exclude: ['cesium']
+  // Expose Cesium as a browser global so any code that references
+  // `Cesium.*` without importing it resolves correctly. This fixes
+  // "Uncaught ReferenceError: Cesium is not defined" at runtime.
+  define: {
+    'window.Cesium': 'Cesium',
   },
-  // CRITICAL: Dedupe @cesium/engine to avoid multiple instances
+  // Exclude cesium from Vite's dep optimization
+  optimizeDeps: {
+    exclude: ['cesium'],
+  },
+  // Dedupe @cesium/engine to avoid multiple instances
   resolve: {
     dedupe: ['@cesium/engine'],
   },
