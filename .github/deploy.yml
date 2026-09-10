@@ -21,13 +21,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Verify package.json exists
-        run: |
-          echo "=== Repo root contents ==="
-          ls -la
-          echo "=== package.json ==="
-          cat package.json
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -40,12 +33,12 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Verify dist was created
+      - name: Debug - list dist contents
         run: |
-          echo "=== dist contents ==="
+          echo "=== dist folder ==="
           ls -la dist
-          echo "=== dist/index.html (first 20 lines) ==="
-          head -20 dist/index.html
+          echo "=== dist/index.html script tag ==="
+          grep -o '<script[^>]*>' dist/index.html || true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
