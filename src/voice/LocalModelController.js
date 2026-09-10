@@ -213,10 +213,11 @@ export class LocalModelController {
             }
             prompt += 'Assistant: ';
 
-            const response = await queryLocalModel(prompt, {
-                maxTokens: 500,
-                temperature: 0.7,
-            });
+           const response = await queryLocalModel(prompt, {
+    model: 'slick.gguf',
+    maxTokens: 500,
+    temperature: 0.7,
+});
 
             const parsed = parseToolResponse(response);
             
