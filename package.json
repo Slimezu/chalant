@@ -5,7 +5,7 @@
   "description": "A real-time intelligence console for planet Earth — photorealistic 3D globe, live aircraft/ships/satellites/earthquakes/CCTV, and hands-free voice control. Runs in a browser.",
   "type": "module",
   "license": "MIT",
-  "author": "Bilawal Sidhu",
+  "author": "Slimezu and SlimeGuff",
   "homepage": "https://github.com/bilawalsidhu/gods-eye-view#readme",
   "repository": {
     "type": "git",
@@ -54,7 +54,7 @@
     "puppeteer": "^24.37.5",
     "sharp": "^0.34.5",
     "vite": "^6.0.0",
-    "vite-plugin-cesium": "^1.2.23",
+    "vite-plugin-cesium": "1.2.23",
     "ws": "^8.21.0"
   }
 }
